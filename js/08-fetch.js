@@ -18,3 +18,22 @@ fetch('https://jsonplaceholder.typicode.com/users')
             document.querySelector('.loading').style.display = "none";
         })
     });
+
+    getInfo()
+    .then(data => {
+        console.log(data);
+    })
+function getInfo(){
+
+    var profesor ={
+        nombre: "Victor",
+        apellido: "Robles"
+    }
+    return new Promise((resolve,reject) => {
+        var profesor_string = JSON.stringify(profesor);
+
+        if(typeof profesor_string != 'string') return reject('error');
+        return resolve (profesor_string); 
+
+    });
+}
