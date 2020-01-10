@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendiendo con Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script>
+        $(document).ready(function(){
+            console.log("Jquery y la web cargados")
+        });
+        </script>
+        <script type="text/javascript" src="js/02-eventos.js"></script>
+
+        <style>
+        #caja{
+            width:250px;
+            height:250px;
+            border: 2px solid black;
+            background: yellow;
+            transition:300ms all;
+        }
+        /*
+        #caja:hover{
+            background:red;
+            cursor:pointer;
+        }
+        */
+        input{
+            padding: 10px;
+            width: 300px;
+            font-size: 20px;
+        }
+        #datos{
+            border: 4px dashed black;
+            padding: 10px;
+            width: 250px;
+            height: 50px;
+            margin-top: 10px;
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Aprendiendo Jquery con Udemy</h1>
+
+        <form>
+            <input id="nombre" type="text">
+        </form>
+        <p></p>
+
+        <div id="datos"></div>
+        <div id="caja">Soy una caja</div>
+    </body>
+
+
