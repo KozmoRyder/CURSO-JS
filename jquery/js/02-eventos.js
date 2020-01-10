@@ -50,13 +50,19 @@ function cambiaVerde(){
     //Mousedown y mouseup
     datos.mousedown(function(){
         $(this).css('border-color','gray')
-    
+    });
     datos.mouseup(function(){
         $(this).css('border-color','black')
             
+    });
+
+    //MouseMove
+    $(document).mousemove(function(){
+        $('body').css("cursor","none")
+        $('#sigueme').css("left", event.clientX)
+                .css("top", event.clientY);
     })
 
 
-
-
+    
 })

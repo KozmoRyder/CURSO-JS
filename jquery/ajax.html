@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendiendo con Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script>
+        $(document).ready(function(){
+            console.log("Jquery y la web cargados")
+        });
+        </script>
+        <script type="text/javascript" src="js/05-ajax.js"></script>
+
+        <style>
+        #datos{
+            border: 2px solid green;
+            width:250px;
+            height:250px;
+            overflow:scroll;
+        }
+        
+        
+        
+        </style>
+
+    </head>
+    <body>
+        <h1>Aprendiendo Jquery con Udemy</h1>
+        <form action="https://reqres.in/api/users" method="POST" id= "formulario">
+            Nombre: <input type:"text" name="name" />
+            Nick: <input type:"text" nick="nick" />
+            <button type:"submit">Registrar</button>
+        </form>
+        <br> 
+        <div id="datos"></div>
+
+    </body>
+
+
