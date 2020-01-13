@@ -23,6 +23,19 @@ $(document).ready(function(){
             console.log("Has soltado algo dentro del area")
         }
     });
+    //Tooltip
+    $(document).tooltip();
+
+    //Dialog   
+    $("#lanzar-popup").click(function(){
+        $("#popup").dialog();
+    })
+    
+    //Datepicker
+    $("#calendario").datepicker();
+
+    //Tabs
+    $("#pestanias").tabs();
 
 
 })
