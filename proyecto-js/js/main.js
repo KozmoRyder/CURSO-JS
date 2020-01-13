@@ -143,11 +143,11 @@ if(window.location.href.indexOf('contacto') > -1){
 //Ver fondo
 
 $('#ver-fondo').click(function(){
-    if ($('#ver-fondo').text() == 'ver fondo'){
-        $('#ver-fondo').text('ocultar fondo');
+    if ($('#ver-fondo').text() == 'Ver fondo'){
+        $('#ver-fondo').text('Ocultar fondo');
         $('#global, footer').hide();
     }else{
-        $('#ver-fondo').text('ver fondo');
+        $('#ver-fondo').text('Ver fondo');
         $('#global, footer').show();
     }
     
