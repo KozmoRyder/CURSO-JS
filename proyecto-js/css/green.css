@@ -1,0 +1,18 @@
+body{
+    background: url('../img/verde.png');
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#logo{
+    background: green;
+}
+
+#menu ul li:hover{
+    background: green;
+}
+
+.button-more{
+    background: green;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Proyecto con Javascript</title>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Jquery UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <!--Plugin Validacion-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <!--Estilos CSS-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/red.css" />
+    <!--Mis Scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+
+    </div>
+    <button id="ver-fondo">ver fondo</button>
+    <section id="global">
+        <!--CABECERA-->
+        <header>
+            <div id="logo">
+                <h1>Proyecto JS</h1>
+            </div>
+            <div class="clearfix"></div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="reloj.html">RELOJ</a></li>
+                    <li><a href="about.html">SOBRE MI</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+
+                </ul>
+            </nav>
+
+        </header>
+        <!--Contenido-->
+        <section id="contenido">
+            <div id="box">
+                <!--Cargar formulario de contacto-->
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form_contact">
+                    <label for ="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric"/>
+
+                    <label for ="surname">Apellido</label>
+                    <input type="text" name="surname" data-validation="alphanumeric"/>
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" data-validation="email"/>
+
+                    <label for="sex">Sexo</label>
+                    <select data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy"/>
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number"/>
+
+                    <input type="submit">
+                </form>
+
+            </div>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4>¿Quien soy?</h4>
+                    <img src="img/bloodhound.jpg" />
+                    <p>Bloodhound es conocida en las Tierras Salvajes por ser una de las mejores cazadoras
+                        de la Frontera... y básicamente eso es todo lo que se sabe de ella.
+                        Su identidad es un misterio rodeado de rumores: que si es increíblemente rica,
+                        una asesina implacable, que si susurra a los titanes Goliat,
+                        que si es una antigua esclava, medio murciélago y muchas cosas más,
+                        dependiendo de a quién se pregunte.</p>
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label form="name">
+                            Nombre
+                        </label>
+                        <input type="text" name="name" id="form_name" />
+
+                        <label form="Email">
+                            Email
+                        </label>
+                        <input type="text" name="password" />
+
+                        <label form="password">
+                            Password
+                        </label>
+                        <input type="password" name="name" />
+                        <input type="submit" value="Entrar" />
+                    </form>
+                </div>
+                <div>
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/-0v-20F7LaU" frameborder="0"
+                        allow="accelerometer; 
+                        autoplay; 
+                        encrypted-media; 
+                        gyroscope; 
+                        picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </aside>
+            <div class="clearfix"></div>
+        </section>
+        <button id="subir">Ir arriba</button>
+        
+    </section>
+    <footer>
+        Master de JavaScript
+    
+    </footer>
+ 
+</body>
+
+
+
+
+
+
+</html>
