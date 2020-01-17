@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser= require('body-parser');
 
 var app = express();
-
 //cargar archivos rutas
 var project_routes = require('./routes/project');
 
