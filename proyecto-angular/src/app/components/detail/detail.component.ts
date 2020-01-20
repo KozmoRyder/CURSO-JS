@@ -42,5 +42,18 @@ export class DetailComponent implements OnInit {
       }
     )
   }
+  deleteProject(id){
+    if(confirm('¿Estas seguro de borrar el proyecto?')){
+      this._projectService.deleteProject(id).subscribe(response =>{
+        if(response.project){
+          this._router.navigate(['/proyectos']);
+        }
+      }),
+      error =>{
+        console.log(<any>error)
+      }
+    }
+
+  }
 
 }

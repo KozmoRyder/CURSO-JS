@@ -44,6 +44,7 @@ header{
     background: rgba(53,103,164,0.8);
     position: fixed;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 header ul{
@@ -328,4 +329,11 @@ project .image{
 .project a{
     text-decoration: none;
     color: black;
+}
+
+#bxslider{
+   z-index: 1;
+   margin: center;
+   width: 600px;
+
 }

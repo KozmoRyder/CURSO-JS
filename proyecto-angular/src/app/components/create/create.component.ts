@@ -3,6 +3,7 @@ import {Project} from '../../models/project'
 import {ProjectService} from '../../services/project.service'
 import {UploadService} from '../../services/upload.service'
 import {Global} from '../../services/global'
+import { Router,ActivatedRoute,Params} from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -17,12 +18,16 @@ export class CreateComponent implements OnInit {
   public status: string;
   public filesToUpload: Array<File>
   public save_project: string;
+  public url:string;
   constructor(
     private _projectService: ProjectService,
-    private _uploadService : UploadService
+    private _uploadService : UploadService,
+    private _route: ActivatedRoute,
+    private _router: Router
   ) {
     this.title= "Crear Proyecto";
     this.project = new Project('','','','',2020,'','');
+    this.url = Global.url;
    }
 
   ngOnInit() {
@@ -33,15 +38,22 @@ export class CreateComponent implements OnInit {
     this._projectService.saveProject(this.project).subscribe(
       response =>{
         if(response.project){
-          
           //Guardar la imagen
-          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id,[],this.filesToUpload, 'image').then((result:any) => {
-            
-            this.save_project = result;
-            
-            this.status = 'success';
-            form.reset();
-          })
+          if(this.filesToUpload.length>0){
+            this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id,[],this.filesToUpload, 'image')
+            .then((result:any) => {
+              
+              this.save_project = result;
+              
+              this.status = 'success';
+              form.reset();
+            })
+          }else{
+            this.save_project = response;
+              
+              this.status = 'success';
+              form.reset();
+          }
           
         }else{
           this.status= 'failed';
